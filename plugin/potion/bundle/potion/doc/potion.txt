@@ -1,0 +1,26 @@
+*potion.txt* functionality for the potion programming language
+
+ ____       _   _            	~  
+|  _ \ ___ | |_(_) ___  _ __ 	~ 
+| |_) / _ \| __| |/ _ \| '_ \	~ 
+|  __/ (_) | |_| | (_) | | | |	~
+|_|   \___/ \__|_|\___/|_| |_|	~
+                              
+==========================================================
+CONTENTS                                  *PotionContents*
+1. Usage ................... |PotionUsage|
+2. Mappings ................ |PotionMapping|
+3. License ................. |PotionLicense|
+4. Bugs .................... |PotionBugs|
+5. Contributing ............ |PotionContributing|
+6. Changelog ............... |PotionChangelog|
+7. Credits ................. |PotionCredits|
+
+==========================================================
+Section 1: usage					 		 *PotionUsage*
+
+This plugin with automatically provide syntax highlighting 
+for Potion files (files ending in . pn)
+
+It also...
+
