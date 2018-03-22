@@ -14,9 +14,6 @@ let g:maplocalleader = ","
 " remap the esc key
 inoremap jk <esc>
 vnoremap jk <esc>
-inoremap <esc> <nop>
-vnoremap <esc> <nop>
-
 
 " convert current word to uppercase in insert and normal mode
 inoremap <c-u> <esc>viwUea
@@ -67,6 +64,8 @@ augroup END
 " foldlevelstart: 文件打开时，设置折叠的层次
 " CTRL-W _ : 多窗口时，把当前窗口放到最大，详细见 :help resize
 " CTRL-s :会种终止当前输入字符，冻结，通过CTRL-q可以退出冻结状态
+" remap <esc> <nop>: 不要remap esc 键，vim
+" 默认的许多配置用到<esc>,容易出现奇怪的问题
 " }}}
 
 

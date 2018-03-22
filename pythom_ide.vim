@@ -1,6 +1,7 @@
 set nocompatible 		" be iMproved, required
 filetype off			" required
 
+
 syntax on
 set number
 set guioptions-=r
@@ -10,7 +11,6 @@ set tabstop=4
 set shiftwidth=4 
 set showtabline=0
 set guifont=Monaco:h13
-set mouse=
 set matchtime=5
 set cursorline
 
@@ -21,9 +21,13 @@ let g:maplocalleader = ","
 " remap the esc key
 inoremap jk <esc>
 vnoremap jk <esc>
-inoremap <esc> <nop>
-vnoremap <esc> <nop>
 			
+" edit vimrc file directly
+nnoremap <leader>ev :split $MYVIMRC<cr>
+
+" source vimrc file
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
 let NERDTreeShowBookmarks=1
@@ -33,15 +37,10 @@ let NERDTreeWinSize=25
 let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
 
-" edit vimrc file directly
-nnoremap <leader>ev :split $MYVIMRC<cr>
-
-" source vimrc file
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+let g:skip_defaults_vim = 1
 
 " some configration options for YCM
 let g:ycm_server_python_interpreter = '/usr/bin/python'
@@ -78,15 +77,15 @@ colorscheme solarized
 
 
 " setting for YCM
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-inoremap <expr> <Down>     pumvisible() ? '\<C-n>' : '\<Down>'
-inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
-inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
-inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'
-nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap K :YcmCompleter GetDoc<CR>
-
+ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+ inoremap <expr> <Down>     pumvisible() ? '\<C-n>' : '\<Down>'
+ inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
+ inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
+ inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'
+ nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+ nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+ nnoremap K :YcmCompleter GetDoc<CR>
+ 
 
 
