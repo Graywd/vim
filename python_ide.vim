@@ -87,5 +87,3 @@ colorscheme solarized
  nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
  nnoremap K :YcmCompleter GetDoc<CR>
  
-
-
